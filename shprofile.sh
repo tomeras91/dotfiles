@@ -50,3 +50,5 @@ fi
 # Some post-secret aliases
 export OCTOKIT_ACCESS_TOKEN="$GITHUB_TOKEN"
 export HUBOT_GITHUB_TOKEN="$GITHUB_TOKEN"
+
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
