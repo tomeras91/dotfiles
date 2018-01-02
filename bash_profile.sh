@@ -52,3 +52,6 @@ then
   bind '"^u" history-search-backward'
   bind '"^v" history-search-forward'
 fi
+
+# Init jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
