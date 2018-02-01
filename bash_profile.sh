@@ -1,6 +1,9 @@
 # load shared shell configuration
 source ~/.shprofile
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # check if this is a login and/or interactive shell
 [ "$0" = "-bash" ] && export LOGIN_BASH="1"
 echo "$-" | grep -q "i" && export INTERACTIVE_BASH="1"
@@ -55,3 +58,9 @@ fi
 
 # Init jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# Init pyenv
+eval "$(pyenv init -)"
+
+# Init pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
