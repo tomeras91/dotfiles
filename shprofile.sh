@@ -48,8 +48,9 @@ fi
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
 # Some post-secret aliases
-export OCTOKIT_ACCESS_TOKEN="$GITHUB_TOKEN"
+export HOMEBREW_GITHUB_TOKEN="$GITHUB_TOKEN"
 export HUBOT_GITHUB_TOKEN="$GITHUB_TOKEN"
+export OCTOKIT_ACCESS_TOKEN="$GITHUB_TOKEN"
 
 if command -v pyenv 1>/dev/null 2>&1; then  eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
