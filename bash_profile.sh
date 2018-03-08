@@ -64,3 +64,6 @@ eval "$(pyenv init -)"
 
 # Init pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
+
+# Pipenv shell completions
+eval "$(pipenv --completion)"
