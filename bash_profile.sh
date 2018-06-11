@@ -5,8 +5,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # check if this is a login and/or interactive shell
-[ "$0" = "-bash" ] && export LOGIN_BASH="1"
-echo "$-" | grep -q "i" && export INTERACTIVE_BASH="1"
+[ "$0" = "-bash" ] && export LOGIN_BASH=1
+echo "$-" | grep -q "i" && export INTERACTIVE_BASH=1
 
 # run bashrc if this is a login, interactive shell
 if [ -n "$LOGIN_BASH" ] && [ -n "$INTERACTIVE_BASH" ]
@@ -15,7 +15,7 @@ then
 fi
 
 # Set HOST for ZSH compatibility
-export HOST=$HOSTNAME
+export HOST="$HOSTNAME"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.

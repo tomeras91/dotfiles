@@ -59,6 +59,7 @@ add_to_path_end "$HOME/.rbenv/bin"
 add_to_path_end "$HOME/.cabal/bin"
 add_to_path_end "/Applications/Fork.app/Contents/Resources"
 add_to_path_end "/Applications/TextMate.app/Contents/Resources"
+add_to_path_end "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 add_to_path_end "/data/github/shell/bin"
 add_to_path_start "/usr/local/bin"
 add_to_path_start "/usr/local/sbin"
@@ -95,6 +96,8 @@ then
   export HOMEBREW_BINTRAY_USER="$(git config bintray.username)"
   export HOMEBREW_DEVELOPER=1
   export HOMEBREW_PRY=1
+  export HOMEBREW_UPGRADE_CLEANUP=1
+  export HOMEBREW_LINKAGE_CACHE=1
 
   alias hbc='cd $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core'
 
@@ -125,7 +128,7 @@ fi
 if [ "$MACOS" ]
 then
   export GREP_OPTIONS="--color=auto"
-  export CLICOLOR="1"
+  export CLICOLOR=1
   export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
   export RESQUE_REDIS_URL="redis://localhost:6379"
   export HEROKU_ORGANIZATION="github-enterprise"
@@ -152,7 +155,6 @@ then
 
   alias ql="qlmanage -p 1>/dev/null"
   alias locate="mdfind -name"
-  alias cpwd="pwd | tr -d '\n' | pbcopy"
   alias finder-hide="setfile -a V"
   alias fork="fork_cli"
 
@@ -183,9 +185,9 @@ then
   export EDITOR="rmate"
   export GIT_EDITOR="$EDITOR -w"
   export SVN_EDITOR=$GIT_EDITOR
-elif quiet_which mate
+elif quiet_which code
 then
-  export EDITOR="mate"
+  export EDITOR="code"
   export GIT_EDITOR="$EDITOR -w"
   export SVN_EDITOR="$GIT_EDITOR"
 elif quiet_which vim
