@@ -68,4 +68,7 @@ eval "$(pyenv virtualenv-init -)"
 # Pipenv shell completions
 eval "$(pipenv --completion)"
 
+# Init nodenv
+eval "$(nodenv init -)"
+
 export PATH="/usr/local/opt/gettext/bin:$PATH"
