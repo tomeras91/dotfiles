@@ -72,3 +72,4 @@ eval "$(pipenv --completion)"
 eval "$(nodenv init -)"
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
