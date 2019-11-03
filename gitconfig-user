@@ -1,8 +1,8 @@
 [user]
 	# Name used in commit messages.
-	name = Barak Peleg
+	name = Tomer Asida
 	# Email used in commit messages.
-	email = pelegb@gmail.com
+	email = tomera@ai21.com
 [github]
 	# GitHub username for command-line tools.
-	user = pelegb
+	user = tomeras91
